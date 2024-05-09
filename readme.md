@@ -1,7 +1,7 @@
  ## Description
 This assignment focuses on adding error handling and routing middleware to an ExpressJS application, as well as implementing a feature to append users to a file. Additionally, it requires a clean separation of concerns within the codebase and integration of linting using eslint and prettier.
 
-1. Require node, 
+
 
 2. Clone the repository to your local machine:
 
