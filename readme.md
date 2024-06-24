@@ -1,40 +1,89 @@
- ## Description
-This assignment focuses on adding error handling and routing middleware to an ExpressJS application, as well as implementing a feature to append users to a file. Additionally, it requires a clean separation of concerns within the codebase and integration of linting using eslint and prettier.
+ 
+## Description
 
+This guide focuses on adding error handling and routing middleware to an ExpressJS application, as well as implementing a feature to append users to a file. Additionally, it ensures a clean separation of concerns within the codebase and integrates linting using ESLint and Prettier.
 
+## Getting Started
 
-2. Clone the repository to your local machine:
+### Prerequisites
 
-3.Navigate to the project directory:
+Make sure you have the following installed on your machine:
+- Node.js and npm
+- Git
 
-`cd Lint`
+### Instructions
 
-4. Install dependencies
+1. **Clone the repository to your local machine:**
 
-`npm install` or
-`npm i`
+   ```bash
+   git clone https://github.com/sindhusid5/expressLint.git 
+   ```
 
-5. To check linting errors and fix them, use the following commands:
-   `npm run format` # Format code using Prettier
-   `npm run lint` # Find linting errors using ESLint
-   `npm run lint:fix` # Fix linting errors automatically
+2. **Navigate to the project directory:**
 
-6. Start the ExpressJS application:
+   ```bash
+   cd expressLint
+   ```
 
-`npm start` or
-`node app.js`
+3. **Install dependencies:**
 
-7. Once the server is running, you can access the following routes:
+   ```bash
+   npm install
+   ```
 
-GET /users: Returns all users.
-GET /users/:id: Returns a user with a specific ID.
-POST /users: Add a user to the starting file.
+4. **Check for linting errors and fix them (optional but recommended):**
 
-Example:
-To fetch all users: http://localhost:4000/users
-To fetch a user with ID 1: http://localhost:4000/users/1
-To post a user: http://localhost:4000/users
+   ```bash
+   npm run format    # Format code using Prettier
+   npm run lint      # Find linting errors using ESLint
+   npm run lint:fix  # Fix linting errors automatically
+   ```
 
-Once the new user added it will be appended at first of the users.json file under sample folder.
+5. **Start the ExpressJS application:**
 
-8. To stop the server, press Ctrl + C in the terminal.
+   ```bash
+   npm start
+   ```
+
+   or
+
+   ```bash
+   node app.js
+   ```
+
+6. **Access the application routes:**
+
+   - **Fetch all users:**
+
+     ```bash
+     GET http://localhost:4000/users
+     ```
+
+   - **Fetch a user with a specific ID (e.g., ID 1):**
+
+     ```bash
+     GET http://localhost:4000/users/1
+     ```
+
+   - **Add a new user:**
+
+     ```bash
+     POST http://localhost:4000/users
+     ```
+
+     - **Example of adding a user (using Postman or similar tool):**
+       - URL: `http://localhost:4000/users`
+       - Method: `POST`
+       - Body: (select `raw` and `JSON`)
+         ```json
+         {
+           "name": "John Doe",
+           "email": "john.doe@example.com"
+         }
+         ```
+
+   - Once a new user is added, they will be appended at the beginning of the `users.json` file under the `sample` folder.
+
+7. **To stop the server:**
+
+   Press `Ctrl + C` in the terminal where the server is running. 
